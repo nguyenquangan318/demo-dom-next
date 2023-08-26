@@ -1,0 +1,17 @@
+ul {
+  display: inline-block;
+}
+
+ul li {
+  display: inline-block;
+}
+
+table,
+th,
+td {
+  border: 1px solid black !important;
+  border-collapse: collapse;
+}
+th {
+  text-align: center !important;
+}

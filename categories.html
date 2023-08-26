@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="categories.css">
+    <title>Categories Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <hr>
+    <form action="" id="control">
+        <label for="catalogNameSearch">Catalog Name</label>
+        <input type="text" name="catalogNameSearch" id="catalogNameSearch" />
+        <button id="btnSearch">Search</button>
+        <label for="sortCatalog">Sort</label>
+        <select name="sortCatalog" id="sortCatalog">
+            <option value="">--Select Sort--</option>
+            <option value="catalogName-ASC">catalogName-ASC</option>
+            <option value="catalogName-DESC">catalogName-DESC</option>
+            <option value="priority-ASC">priority-ASC</option>
+            <option value="priority-DESC">priority-DESC</option>
+        </select>
+    </form>
+    <hr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Catalog Id</th>
+                <th>Catalog Name</th>
+                <th>Priority</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="listCatalog">
+
+        </tbody>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Thêm
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="catalogInfo" class="w-25">
+                            <label for="catalogId" class="form-label">Catalog ID</label>
+                            <input type="text" name="catalogId" id="catalogId" class="form-control" /><br>
+                            <label for="catalogName" class="form-label">Catalog Name</label>
+                            <input type="text" name="catalogName" id="catalogName" class="form-control" /><br>
+                            <label for="priority" class="form-label">Priority</label>
+                            <input type="number" name="priority" id="priority" class="form-control" /><br>
+                            <label for="description" class="form-label">Description</label>
+                            <input type="text" name="description" id="description" class="form-control" /><br>
+                            <label for="active" class="form-label">Status</label>
+                            <input type="radio" name="status" id="active" checked value="true" /><label
+                                for="active">Active</label>
+                            <input type="radio" name="status" id="inActive" value="false" /><label
+                                for="inActive">InActive</label><br>
+                            <!-- <button id="btnSubmit" class="btn btn-primary">Save</button> -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="btnSubmit" data-bs-dismiss="modal">Save
+                            changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </table>
+    <a href="javascript:clickPreview()" id="preview">Preview</a>
+    <ul id="listPage">
+    </ul>
+    <a href="javascript:clickNext()" id="next">Next</a>
+    <script src="categories.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
